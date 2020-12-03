@@ -1,0 +1,23 @@
+{% extends 'list.html' %}
+
+{% block columns %}
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">NIT</th>
+        <th scope="col">Descripción</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for e in empresas %}
+        <tr>
+            <td>{{ e.codempresa }}</td>
+            <td>{{ e.nit }}</td>
+            <td>{{ e.razonsocial }}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-primary btn-xs"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+    {% endfor %}
+{% endblock %}

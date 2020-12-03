@@ -1,0 +1,87 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+    
+    <header>
+        {% include "header.html" %}
+    </header>
+
+    <body>
+        <div class="container">
+            <p>
+                <H1>
+                    <strong>Gracias por visitarnos, si esta interesado en conocer más de nosotros escríbanos, pronto estaremos en contacto.</strong>
+                </H1> 
+            </p><br>
+
+            <div class="LeftContact">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <p>{{ contact_form.nomape.label }}</p>
+                        {% render_field contact_form.nomape class+="form-control" %}
+                        {{ contact_form.nomape.errors }}
+                    </div>
+
+                    <div class="form-group">
+                        <p>{{ contact_form.numtel.label }}</p>
+                        {% render_field contact_form.numtel class+="form-control" %}
+                        {{ contact_form.numtel.errors }}
+                    </div>
+
+                    <div class="form-group">
+                        <p>{{ contact_form.email.label }}</p>
+                        {% render_field contact_form.email class+="form-control" %}
+                        {{ contact_form.email.errors }}
+                    </div>
+
+                    <div class="form-group">
+                        <p>{{ contact_form.asunto.label }}</p>
+                        {% render_field contact_form.asunto class+="form-control" %}
+                        {{ contact_form.asunto.errors }}
+                    </div>
+
+                    <div class="form-group">
+                        <p>{{ contact_form.mensaje.label }}</p>
+                        {% render_field contact_form.mensaje class+="form-control" %}
+                        {{ contact_form.mensaje.errors }}
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="Button">Enviar</button>
+                        <!--class="btn btn-success"-->
+                    </div>
+    
+                </form>
+
+
+
+                
+            </div>
+
+
+
+            <div class="RightContact">
+                
+                <i class="bx bx-current-location"></i>
+                Santiago de Cali, Valle del Cauca<br> 
+                Calle 36 # 11C-77 Barrio El Troncal<br>
+                <i class="bx bx-phone"></i>
+                <i class="bx bxl-whatsapp"></i>
+                320 691 9937<br>
+                <i class="bx bx-mail-send"></i>
+                orionsoftwarecolombia@gmail.com<br>
+                
+            </div>
+
+            
+        </div>   
+    </body>
+
+    <footer >
+        {% include "footer.html" %}
+    </footer>  
+
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Orion Software Colombia Ltda.</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="{% static 'img/favicon.png' %}" rel="icon">
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}assets/" rel="stylesheet">
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="{% static 'ss/style.css' %}" rel="stylesheet">
+
+        <!--SLIDER -->
+        <link rel="stylesheet" href="{% static 'slider/flexslider.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="{% static 'slider/js/jquery.flexslider.js'%}"></script>
+        <script type="text/javascript" charset="utf-8">
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+            touch: true,
+            pauseOnAction: false,
+            pauseOnHover: false,
+        });
+      });
+    </script>
+
+    
+
+    </head>
+
+    <header>
+        {% include "header.html" %}
+    </header>  
+
+    <body>
+        <div class="container">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="{% static 'slider/images/1.jpg' %}" alt="">
+                        <section class="flex-caption">
+                            <p>LOREM IPSUM 1</p>
+                        </section>
+                    </li>
+                    <li>
+                        <img src="{% static 'slider/images/2.jpg' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'slider/images/3.jpg' %}" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div> 
+           
+    </body>
+    
+    <footer>
+        {% include "footer.html" %}
+    </footer> 
+
+</html>

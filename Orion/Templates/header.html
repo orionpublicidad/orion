@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Orion Software Colombia Ltda.</title>
+        
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        
+        <!--Iconos menu de navegacion-->
+        <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+        <!--CSS-->
+        <link href="{% static 'ss/style.css' %}" rel="stylesheet">
+    </head>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <!--<div class="d-flex flex-column">-->
+
+        <div class="profile">
+            <img src="{% static 'Images/LogoTipoOrionSoftware.png' %}">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li>
+                    <a href="{% url 'homepage' %}">
+                        <i class="bx bx-home"></i> <span>INICIO</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'quienessomos' %}">
+                        <i class="bx "></i> <span>QUIÉNES SOMOS</span>
+                    </a>
+                </li>
+                
+                
+                <li><a href="#about"><i class="bx bx-"></i> <span>NUESTRO PRODUCTO</span></a></li>
+
+                <li>
+                    <a href="{% url 'servicios' %}">
+                        <i class="bx bx-"></i> <span>SERVICIOS</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="{% url 'contacto' %}">
+                        <i class="bx "></i> <span>CONTACTENOS</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'login' %}">
+                        <i class="bx bx-user"></i> <span>INICIAR SESIÓN</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+        <!--</div>-->
+    </header><!-- End Header -->
+</html>
